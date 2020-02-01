@@ -11,9 +11,9 @@ namespace Factory
             if (shape == ShapeType.LINES)
                 return new Line();
             else if (shape == ShapeType.CIRCLE)
-                return Circle();
+                return new Circle();
             else if (shape == ShapeType.RECTANGLE)
-                return Rectangle();
+                return new Rectangle();
             else
                 return null;
         }

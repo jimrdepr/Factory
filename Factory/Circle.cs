@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Factory
 {
-    class Circle
+    class Circle : GeometricShapes
     {
         public void Draw()
         {

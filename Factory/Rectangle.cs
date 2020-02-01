@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Factory
 {
-    class Rectangle
+    class Rectangle : GeometricShapes
     {
         public void Draw()
         {

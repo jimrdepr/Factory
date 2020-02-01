@@ -6,12 +6,16 @@ namespace Factory
     {
         static void Main(string[] args)
         {
-            ShapeFactory shape = new ShapeFactory();
+            ShapeFactory factory = new ShapeFactory();
+            GeometricShapes shape;
 
             foreach (ShapeFactory.ShapeType s in Enum.GetValues(typeof(ShapeFactory.ShapeType)))
             {
-                if (shape.GetShape(s) == null)
-                    Console.WriteLine(s + " was not printed out");
+                shape = factory.GetShape(s);
+                if (shape == null)
+                    Console.WriteLine("Shape not implemented");
+                else
+                    shape.Draw();
             }
         }
     }
